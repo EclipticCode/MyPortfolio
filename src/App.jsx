@@ -1,8 +1,18 @@
 import React from 'react'
+import styled, { ThemeProvider } from 'styled-components'
+import { darkTheme } from './utils/Themes'
+import Navbar from './components/Navbar'
+import { BrowserRouter } from 'react-router-dom'
 
 const App = () => {
   return (
-    <div>App</div>
+    
+      <ThemeProvider theme={darkTheme}>
+        <BrowserRouter>
+        <Navbar/>
+        </BrowserRouter>
+      </ThemeProvider>
+    
   )
 }
 
