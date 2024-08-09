@@ -1,12 +1,17 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 import { Bio } from "../../data/constants";
-import Typewriter from 'typewriter-effect';
-import HeroImg from '../../images/HeroImage.jpg';
-import HeroBgAnimation from '../HeroBgAnimation';
-import { Tilt } from 'react-tilt';
-import { motion } from 'framer-motion';
-import { headContainerAnimation , headContentAnimation, headTextAnimation } from '../../utils/motion';
+import Typewriter from "typewriter-effect";
+import HeroImg from "../../images/HeroImage.jpg";
+import HeroBgAnimation from "../HeroBgAnimation";
+import { Tilt } from "react-tilt";
+import { motion } from "framer-motion";
+import {
+  headContainerAnimation,
+  headContentAnimation,
+  headTextAnimation,
+} from "../../utils/motion";
+import StarCanvas from '../canvas/Stars'
 
 const HeroContainer = styled.div`
   display: flex;
@@ -173,7 +178,7 @@ const ResumeButton = styled.a`
 `;
 
 const Img = styled.img`
-   border-radius: 6%;
+  border-radius: 6%;
   width: 350px;
   height: 1000px;
   max-width: 400px;
@@ -213,46 +218,48 @@ const HeroBg = styled.div`
 const Hero = () => {
   return (
     <div id="about">
-        <HeroContainer>
-            <HeroBg>
-               <HeroBgAnimation/>
-            </HeroBg>
-            <motion.div {...headContainerAnimation}>
-            <HeroInnerContainer>
-                <HeroLeftContainer>
-                    <motion.div {...headTextAnimation}>
-                    <Title>Hi, I am <br/> {Bio.name}</Title>
-                    <TextLoop>I am a 
-                        <Span>
-                          <Typewriter 
-                          options = {{
-                            strings : Bio.roles,
-                            autoStart : true , 
-                            loop : true
-                          }}
-                          />
-                        </Span>
-                        </TextLoop>
-                    </motion.div>
-                    
-                        <motion.div {...headContentAnimation}>
-                        <SubTitle>{Bio.description}</SubTitle>
-                        </motion.div>
-                        <ResumeButton>Check Resume</ResumeButton>
-                </HeroLeftContainer>
-                <HeroRightContainer>
-                   <motion.div {...headContentAnimation}>
-                   <Tilt>
-                    <Img src={HeroImg} alt="Janani"/>
-                    </Tilt>
-                   </motion.div>
-                </HeroRightContainer>
-            </HeroInnerContainer>
-            </motion.div>
-           
-        </HeroContainer>
+      <HeroContainer>
+        <HeroBg>
+            <StarCanvas/>
+          <HeroBgAnimation />
+        </HeroBg>
+        <motion.div {...headContainerAnimation}>
+          <HeroInnerContainer>
+            <HeroLeftContainer>
+              <motion.div {...headTextAnimation}>
+                <Title>
+                  Hi, I am <br /> {Bio.name}
+                </Title>
+                <TextLoop>
+                  I am a
+                  <Span>
+                    <Typewriter
+                      options={{
+                        strings: Bio.roles,
+                        autoStart: true,
+                        loop: true,
+                      }}
+                    />
+                  </Span>
+                </TextLoop>
+              </motion.div>
+              <motion.div {...headContentAnimation}>
+                <SubTitle>{Bio.description}</SubTitle>
+              </motion.div>
+              <ResumeButton>Check Resume</ResumeButton>
+            </HeroLeftContainer>
+            <HeroRightContainer>
+              <motion.div {...headContentAnimation}>
+                <Tilt>
+                  <Img src={HeroImg} alt="Janani" />
+                </Tilt>
+              </motion.div>
+            </HeroRightContainer>
+          </HeroInnerContainer>
+        </motion.div>
+      </HeroContainer>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

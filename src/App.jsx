@@ -4,6 +4,7 @@ import { darkTheme } from './utils/Themes'
 import Navbar from './components/Navbar'
 import { BrowserRouter } from 'react-router-dom'
 import Hero from './components/sections/Hero'
+import Skills from './components/sections/Skills'
 
 
 const Body = styled.div`
@@ -21,6 +22,7 @@ const App = () => {
         <Navbar/>
         <Body>
         <Hero/>
+        <Skills/>
         </Body>
         </BrowserRouter>
       </ThemeProvider>
