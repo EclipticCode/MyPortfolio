@@ -124,26 +124,26 @@ const Skills = () => {
         <Container id="Skills">
             <Wrapper>
                 <Title>Skills</Title>
-                <Desc style={{ marginBotton : "40ox" }} >
+                <Desc style={{ marginBotton : "40px" }} >
                     Here are some of my skills on which I have been working on 
                 </Desc>
                 <SkillsContainer>
-                    {skills.map((skill,index) => (
-                     <Tilt>
-                        <Skill>
-                        <SkillTitle>{skill.title}</SkillTitle>
-                        <SkillList>
-                            {skill.skills.map((item , index_x) => (
-                               <SkillItem key={`skill-x-${index_x}`}>
-                                <SkillImage src={item.image}/>
-                                {item.name}
-                               </SkillItem>
-                            ))}
-                        </SkillList>
-                     </Skill>
-                     </Tilt>
-                    ))}
-                </SkillsContainer>
+          {skills.map((skill, index) => (
+            <Tilt>
+              <Skill key={`skill-${index}`}>
+                <SkillTitle>{skill.title}</SkillTitle>
+                <SkillList>
+                  {skill.skills.map((item, index_x) => (
+                    <SkillItem key={`skill-x-${index_x}`}>
+                      <SkillImage src={item.image} />
+                      {item.name}
+                    </SkillItem>
+                  ))}
+                </SkillList>
+              </Skill>
+            </Tilt>
+          ))}
+        </SkillsContainer>
             </Wrapper>
         </Container>
     </div>

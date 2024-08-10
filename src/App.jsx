@@ -1,12 +1,13 @@
-import React from 'react'
-import styled, { ThemeProvider } from 'styled-components'
-import { darkTheme } from './utils/Themes'
-import Navbar from './components/Navbar'
-import { BrowserRouter } from 'react-router-dom'
-import Hero from './components/sections/Hero'
-import Skills from './components/sections/Skills'
-import Education from './components/sections/Education'
-
+import React from "react";
+import styled, { ThemeProvider } from "styled-components";
+import { darkTheme } from "./utils/Themes";
+import Navbar from "./components/Navbar";
+import { BrowserRouter } from "react-router-dom";
+import Hero from "./components/sections/Hero";
+import Skills from "./components/sections/Skills";
+import Education from "./components/sections/Education";
+import Course from "./components/sections/Course";
+import StarCanvas from "./components/canvas/Stars";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -15,21 +16,39 @@ const Body = styled.div`
   position: relative;
 `;
 
+const Wrapper = styled.div`
+  padding-bottom: 100px;
+  background: linear-gradient(
+      38.73deg,
+      rgba(204, 0, 187, 0.15) 0%,
+      rgba(201, 32, 184, 0) 50%
+    ),
+    linear-gradient(
+      141.27deg,
+      rgba(0, 70, 209, 0) 50%,
+      rgba(0, 70, 209, 0.15) 100%
+    );
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
+`;
+
 const App = () => {
   return (
-    
-      <ThemeProvider theme={darkTheme}>
-        <BrowserRouter>
-        <Navbar/>
+    <ThemeProvider theme={darkTheme}>
+      <BrowserRouter>
+        <Navbar />
         <Body>
-        <Hero/>
-        <Education/>
-        <Skills/>
+          <StarCanvas />
+          <Hero />
+          <Education />
+          <br /><br /><br /><br />
+          <Course />
+          <br /><br /><br /><br />
+          <Skills />
         </Body>
-        </BrowserRouter>
-      </ThemeProvider>
-    
-  )
-}
+      </BrowserRouter>
+    </ThemeProvider>
+  );
+};
 
-export default App
+export default App;
