@@ -9,6 +9,7 @@ import Education from "./components/sections/Education";
 import Course from "./components/sections/Course";
 import StarCanvas from "./components/canvas/Stars";
 import Footer from "./components/sections/Footer";
+import Contact from "./components/sections/Contact";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -43,10 +44,16 @@ const App = () => {
           <Hero />
           <Education />
           <br /><br /><br /><br />
+          <Wrapper>
           <Course />
           <br /><br /><br /><br />
           <Skills />
+          </Wrapper>
+          <br /><br /><br /><br />
           <Wrapper>
+          <Contact/>
+          <br /><br /><br /><br />
+          
           <Footer/>
           </Wrapper>
         </Body>
