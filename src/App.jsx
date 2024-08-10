@@ -8,6 +8,7 @@ import Skills from "./components/sections/Skills";
 import Education from "./components/sections/Education";
 import Course from "./components/sections/Course";
 import StarCanvas from "./components/canvas/Stars";
+import Footer from "./components/sections/Footer";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -45,6 +46,9 @@ const App = () => {
           <Course />
           <br /><br /><br /><br />
           <Skills />
+          <Wrapper>
+          <Footer/>
+          </Wrapper>
         </Body>
       </BrowserRouter>
     </ThemeProvider>
