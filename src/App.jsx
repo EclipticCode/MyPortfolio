@@ -10,6 +10,7 @@ import Course from "./components/sections/Course";
 import StarCanvas from "./components/canvas/Stars";
 import Footer from "./components/sections/Footer";
 import Contact from "./components/sections/Contact";
+import Projects from "./components/sections/Projects";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -49,11 +50,11 @@ const App = () => {
           <br /><br /><br /><br />
           <Skills />
           </Wrapper>
+          <Projects/>
           <br /><br /><br /><br />
           <Wrapper>
           <Contact/>
           <br /><br /><br /><br />
-          
           <Footer/>
           </Wrapper>
         </Body>

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
 import HeroImg from "../../images/HeroImage.jpg";
+import JananiImg from "../../images/NewPic.jpg"
 import HeroBgAnimation from "../HeroBgAnimation";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
@@ -178,9 +179,9 @@ const ResumeButton = styled.a`
 `;
 
 const Img = styled.img`
-  border-radius: 6%;
-  width: 350px;
-  height: 1000px;
+  border-radius: 5%;
+  width: 275px;
+  height: 975px;
   max-width: 400px;
   max-height: 400px;
   border: 2px solid ${({ theme }) => theme.primary};
@@ -251,7 +252,7 @@ const Hero = () => {
             <HeroRightContainer>
               <motion.div {...headContentAnimation}>
                 <Tilt>
-                  <Img src={HeroImg} alt="Janani" />
+                  <Img src={JananiImg} alt="Janani" />
                 </Tilt>
               </motion.div>
             </HeroRightContainer>
