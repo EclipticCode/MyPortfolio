@@ -71,11 +71,11 @@ const Projects = () => {
         </Desc>
         <CardContainer>
           {toggle === "all" &&
-            projects.map((project) => <ProjectCard project={project} />)}
+            projects.map((project , index) => <ProjectCard key={project.id || index} project={project} />)}
           {projects
             .filter((item) => item.category === toggle)
             .map((project) => (
-              <ProjectCard project={project} />
+              <ProjectCard key={project.id || index} project={project} />
             ))}
         </CardContainer>
       </Wrapper>

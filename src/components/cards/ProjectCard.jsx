@@ -36,6 +36,14 @@ const Tags = styled.div`
   margin-top: 4px;
   color: ${({ theme }) => theme.primary};
 `;
+const Tag = styled.div`
+  background-color: ${({ theme }) => theme.primary + 20};
+  color: ${({ theme }) => theme.primary};
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+`
 const Details = styled.div`
   width: 100%;
   display: flex;
@@ -65,6 +73,7 @@ const Date = styled.div`
   }
 `;
 const Description = styled.div`
+  font-size: 14px;
   font-weight: 400;
   color: ${({ theme }) => theme.text_secondary + 99};
   overflow: hidden;
@@ -75,44 +84,52 @@ const Description = styled.div`
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
 `;
-const Members = styled.div`
+const ButtonContainer = styled.div`
   display: flex;
-  align-items: center;
-  padding-left: 10px;
-`;
-const Avatar = styled.img`
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  margin-left: -10px;
-  background-color: ${({ theme }) => theme.white};
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border: 3px solid ${({ theme }) => theme.card};
+  justify-content: space-between;
+  gap: 3px;
+  margin-top: auto;
 `;
 const Button = styled.a`
   color: ${({ theme }) => theme.primary};
   text-decoration: none;
-  font-weight: 600;
+  font-size : 12px;
+  font-weight: 400;
+  flex: 1;
   text-align: center;
+  padding: 3px;
+  background-color: ${({ theme }) => theme.buttonBackground};
+  border-radius: 5px;
+  border: 1px solid ${({ theme }) => theme.buttonBorderColor};
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: ${({ theme }) => theme.buttonHoverBackground};
+  }
 `;
 
 const ProjectCard = ({ project }) => {
   return (
     <Card>
       <Image src={project.image} />
-      <Tags>{project.tags}</Tags>
+      <Tags>{project.tags.map((tag,index) => (
+        <Tag key={index}>{tag}</Tag>
+      ))}</Tags>
       <Details>
         <Title>{project.title}</Title>
         <Date>{project.date}</Date>
         <Description>{project.description}</Description>
       </Details>
-      <Members>
-        {project.member?.map((member) => (
-          <Avatar src={member.img} />
-        ))}
-      </Members>
-      <Button href={project.github} target="_blank">
-        View Code
+      <ButtonContainer>
+        <Button href={project.github} target="_blank">
+          Front End Code
+        </Button>
+        <Button href={project.github} target="_blank">
+          Back End Code
+        </Button>
+      </ButtonContainer>
+      <Button href={project.webapp} target="_blank"> 
+        View Live App
       </Button>
     </Card>
   );
