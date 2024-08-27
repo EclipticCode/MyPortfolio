@@ -102,6 +102,7 @@ const ContactButton = styled.input`
   color: ${({ theme }) => theme.text_primary};
   font-size: 18px;
   font-weight: 600;
+  cursor:pointer;
 `;
 
 const Contact = () => {
@@ -126,7 +127,7 @@ const Contact = () => {
       );
   };
   return (
-    <Container id="Education">
+    <Container id="Contact">
       <Wrapper>
         <Title>Contact</Title>
         <Desc

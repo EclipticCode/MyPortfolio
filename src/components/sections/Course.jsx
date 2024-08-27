@@ -51,7 +51,7 @@ const Desc = styled.div`
 
 const Course = () => {
   return (
-    <Container id="course">
+    <Container id="Course">
       <Wrapper>
         <Title>Certification Course</Title>
         <Desc

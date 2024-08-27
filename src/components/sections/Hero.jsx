@@ -218,7 +218,7 @@ const HeroBg = styled.div`
 
 const Hero = () => {
   return (
-    <div id="about">
+    <div id="About">
       <HeroContainer>
         <HeroBg>
             <StarCanvas/>

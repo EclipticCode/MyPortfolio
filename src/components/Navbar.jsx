@@ -4,6 +4,7 @@ import { Link as LinkR } from "react-router-dom";
 import { Bio } from "../data/constants";
 import { MenuRounded } from "@mui/icons-material";
 
+
 const Nav = styled.div`
   background-color: ${({ theme }) => theme.bg};
   height: 80px;
@@ -29,10 +30,11 @@ const NavbarContainer = styled.div`
 const NavLogo = styled(LinkR)`
   width: 80%;
   padding: 0 6px;
-  font-weight: 500;
-  font-size: 18px;
+  font-family: montserrat;
+  font-weight: 700;
+  font-size: 44px;
   text-decoration: none;
-  color: inherit;
+  color: ${({ theme }) => theme.primary};
 `;
 
 const NavItems = styled.ul`
@@ -131,7 +133,7 @@ const Navbar = () => {
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo to="/"> MY PORTFOLIO </NavLogo>
+        <NavLogo to="/"> jb </NavLogo>
         <MobileIcon onClick={() => setIsOpen(!isOpen)}>
           <MenuRounded style={{ color: "inherit" }} />
         </MobileIcon>
