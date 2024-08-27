@@ -74,10 +74,11 @@ const Footer = () => {
         <Logo>Janani Bharathi</Logo>
         <Nav>
           <NavLink href="#About">About</NavLink>
-          <NavLink href="#Skills">Skills</NavLink>
-          <NavLink href="#Experience">Experience</NavLink>
-          <NavLink href="#Projects">Projects</NavLink>
           <NavLink href="#Education">Education</NavLink>
+          <NavLink href="#Course">Course</NavLink>
+          <NavLink href="#Skills">Skills</NavLink>
+          <NavLink href="#Projects">Projects</NavLink>
+          <NavLink href="#Contact">Contact</NavLink>
         </Nav>
         <Copyright>&copy; 2024 Janani Bharathi. All rights reserved.</Copyright>
       </FooterWrapper>
