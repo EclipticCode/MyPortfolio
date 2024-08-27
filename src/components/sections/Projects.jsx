@@ -67,7 +67,7 @@ const Projects = () => {
             marginBottom: "40px",
           }}
         >
-          I have worked on a wide range of projects. . Here are some of my projects.
+          I have worked on a wide range of projects. Here are some of my projects.
         </Desc>
         <CardContainer>
           {toggle === "all" &&

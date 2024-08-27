@@ -121,10 +121,10 @@ const ProjectCard = ({ project }) => {
         <Description>{project.description}</Description>
       </Details>
       <ButtonContainer>
-        <Button href={project.github} target="_blank">
+        <Button href={project.frontEnd} target="_blank">
           Front End Code
         </Button>
-        <Button href={project.github} target="_blank">
+        <Button href={project.backEnd} target="_blank">
           Back End Code
         </Button>
       </ButtonContainer>
