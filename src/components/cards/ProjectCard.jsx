@@ -87,24 +87,24 @@ const Description = styled.div`
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  gap: 3px;
+  gap: 5px;
   margin-top: auto;
 `;
 const Button = styled.a`
   color: ${({ theme }) => theme.primary};
   text-decoration: none;
   font-size : 12px;
-  font-weight: 400;
+  font-weight: 600;
   flex: 1;
   text-align: center;
-  padding: 3px;
+  padding: 2px;
   background-color: ${({ theme }) => theme.buttonBackground};
   border-radius: 5px;
   border: 1px solid ${({ theme }) => theme.buttonBorderColor};
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
   &:hover {
-    background-color: ${({ theme }) => theme.buttonHoverBackground};
+    background-color: ${({ theme }) => theme.primary + 20};
   }
 `;
 

@@ -52,9 +52,9 @@ const App = () => {
           </Wrapper>
           <Projects/>
           <br /><br /><br /><br />
-          <Wrapper>
           <Contact/>
           <br /><br /><br /><br />
+          <Wrapper>
           <Footer/>
           </Wrapper>
         </Body>
