@@ -52,7 +52,7 @@ const Details = styled.div`
   padding: 0px 2px;
 `;
 const Title = styled.div`
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_secondary};
   overflow: hidden;

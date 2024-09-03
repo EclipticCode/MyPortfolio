@@ -52,8 +52,7 @@ const CardContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 28px;
-  flex-wrap: wrap;
+  gap: 20px;
 `;
 
 const Projects = () => {

@@ -159,6 +159,7 @@ export const Bio = {
 import AutoSharePic from '../images/AutoShare.png'
 import TheBookBazaar from '../images/TheBookBazaar.png'
 import TechTimes from '../images/TechTimes.png'
+import DLWS from '../images/DLWS.png'
 
  export const projects = [
     {
@@ -193,7 +194,19 @@ import TechTimes from '../images/TechTimes.png'
       tags: ["React Js","TailwindCSS","MongoDb", "Node Js", "Express Js"],
       frontEnd: "https://github.com/EclipticCode/TechTimes-FrontEnd",
       backEnd : "https://github.com/EclipticCode/TechTimes-BackEnd" ,
-      webapp:   "https://techtimes-frontend.netlify.app/ ",
+      webapp:   "https://techtimes-frontend.netlify.app/",
+    },
+    {
+      id: 4,
+      title: "Dhanalakshmi Water Supplies",
+      date: "August 2024",
+      description:
+        "Dhanalakshmi Water Supplies is a Tanker Lorry Water supply company. This website was developed to enhance our online presence and provide easy access to information about our services, company history and contact details.",
+      image: DLWS,
+      tags: ["React Js","TailwindCSS","MongoDb", "Node Js", "Express Js"],
+      frontEnd: "https://github.com/EclipticCode/DWS-FE",
+      backEnd : "https://github.com/EclipticCode/DWS-BE" ,
+      webapp:   "https://dlws.netlify.app/",
     },
   ];
   
